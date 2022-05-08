@@ -24,6 +24,9 @@ describe("return last element from list", () => {
     test('should return 4 from array', () => {
         expect(returnTargetIndex([3, 2, 5, 4], 0)).toBe(3)
     })
+    test('should return error', () => {
+        expect(returnTargetIndex([3, 2, 5, 4], 4)).toBe("Error")
+    })
 })
 
 

@@ -1,7 +1,7 @@
 function sum(a, b) {
     return a + b;
   }
-  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums}
+  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords}
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
 if (indexToCheck >= arrayofInts.length){
@@ -32,6 +32,34 @@ function removeEvenNums(arrayofInts, checkOddOrEven) {
         return (arrayofInts.filter(integer => integer %2 == 0 && integer !== 0))
     }
 }
+
+function countWords(arrayOfWords) {
+    let longest = 0
+    arrayOfWords.forEach(str => {
+        let wordCount = str.split(' ').length
+        if (wordCount > longest){
+            longest = wordCount
+        }
+    })
+
+    return longest
+}
+
+
+
+
+
+
+// Differences between arrays and objects
+// Arrays (or lists) are ordered - they have index value
+// Arrays can have any amount of things in ANY order
+// Objects have to have everything set in pairs of two   
+// One key has one value  A : 2
+// NO KEY or VALUE can exist without its pair
+// Order is not defined in an object
+
+
+
     // else {
     //     return (filter.evens)
     // }

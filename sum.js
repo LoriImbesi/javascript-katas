@@ -1,7 +1,7 @@
 function sum(a, b) {
     return a + b;
   }
-  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords}
+  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber}
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
 if (indexToCheck >= arrayofInts.length){
@@ -41,11 +41,20 @@ function countWords(arrayOfWords) {
             longest = wordCount
         }
     })
-
     return longest
 }
 
+function largestNumber(number) {
+    // what numbers do we have
+    // convert integer into string
+    // break int in to array of strings
+    // split them?
+    // need to arrange them from largest to smallest
 
+    return parseInt(number.toString().split('').sort((a, b) => {
+       return b - a
+    }).join(''))
+}
 
 
 

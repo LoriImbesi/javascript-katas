@@ -1,7 +1,7 @@
 function sum(a, b) {
     return a + b;
   }
-  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber}
+  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber, cheapVegetables}
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
 if (indexToCheck >= arrayofInts.length){
@@ -56,8 +56,16 @@ function largestNumber(number) {
     }).join(''))
 }
 
+function cheapVegetables(obj) {
+    return Object.keys(obj).filter(key => obj[key] < 10)
+}
 
+cheapVegetables(
+    {url: "localproduce.com", lettuce: 5, tomatoes: 2, asparagus: 1969,}
+)
 
+// return arrayOfCheapVeggies
+    //let arrayOfCheapVeggies = Object.entries(obj)
 
 // Differences between arrays and objects
 // Arrays (or lists) are ordered - they have index value

@@ -1,4 +1,4 @@
-const {sum, returnTargetIndex, removeTwos, countWords, largestNumber} = require('./sum');
+const {sum, returnTargetIndex, removeTwos, countWords, largestNumber, cheapVegetables} = require('./sum');
 // only
 // skip
 
@@ -51,6 +51,15 @@ describe("return the highest word count in an array", () => {
 describe("return the largest possible number", () => {
     test('1624 should become 6421', () => {
         expect(largestNumber(1624)).toEqual(6421)
+    })
+
+})
+
+describe("cheap vegetables", () => {
+    test('should return everything cheaper than 10', () => {
+        expect(cheapVegetables({
+            url: "localproduce.com", lettuce: 5, tomatoes: 2, asparagus: 1969,
+        })).toEqual(["lettuce", "tomatoes"])
     })
 
 })

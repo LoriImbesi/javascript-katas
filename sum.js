@@ -1,7 +1,7 @@
 function sum(a, b) {
     return a + b;
   }
-  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber, cheapVegetables}
+  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber, cheapVegetables, sumOfArray}
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
 if (indexToCheck >= arrayofInts.length){
@@ -60,9 +60,11 @@ function cheapVegetables(obj) {
     return Object.keys(obj).filter(key => obj[key] < 10)
 }
 
-cheapVegetables(
-    {url: "localproduce.com", lettuce: 5, tomatoes: 2, asparagus: 1969,}
-)
+function sumOfArray(strings) {
+    return strings.reduce((accumStr, nextString) => {
+        return accumStr + nextString
+    }, "")
+}
 
 // return arrayOfCheapVeggies
     //let arrayOfCheapVeggies = Object.entries(obj)

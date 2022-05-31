@@ -1,4 +1,4 @@
-const {sum, returnTargetIndex, removeTwos, countWords, largestNumber, cheapVegetables} = require('./sum');
+const {sum, returnTargetIndex, removeTwos, countWords, largestNumber, cheapVegetables, sumOfArray} = require('./sum');
 // only
 // skip
 
@@ -60,6 +60,12 @@ describe("cheap vegetables", () => {
         expect(cheapVegetables({
             url: "localproduce.com", lettuce: 5, tomatoes: 2, asparagus: 1969,
         })).toEqual(["lettuce", "tomatoes"])
+    })
+})
+
+describe("combine array of strings", () => {
+    test('return the aggregate of strings', () => {
+        expect(sumOfArray(["things", "cheese", "whiz"] )).toEqual("thingscheesewhiz")
     })
 
 })

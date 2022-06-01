@@ -1,9 +1,8 @@
-const {sum, returnTargetIndex, removeTwos, countWords, largestNumber, cheapVegetables, sumOfArray} = require('./sum');
+const {sum, returnTargetIndex, removeTwos, countWords, largestNumber, cheapVegetables, sumOfArray, cheaperThanTen} = require('./sum');
 // only
 // skip
 
 // always use npm test
-
 
 describe("sum test block", () => {
     test('adds 1 + 2 to equal 3', () => {
@@ -18,7 +17,6 @@ describe("sum test block", () => {
         expect(sum(3, 2)).toBe(5);
     });
 })
-
 
 describe("return last element from list", () => {
     test('should return 4 from array', () => {
@@ -35,7 +33,6 @@ describe("remove all instances of number 2 in array", () => {
     })
 
 })
-
 
 describe("return the highest word count in an array", () => {
     test('return the highest word count in an array', () => {
@@ -69,3 +66,48 @@ describe("combine array of strings", () => {
     })
 
 })
+
+describe("get items cheaper than 10", () => {
+    test('filters items and return ids 3 and 4', () => {
+        expect(cheaperThanTen([
+            {
+                id: 3,
+                name: 6,
+                price: 5
+            },
+            {
+                id: 8,
+                name: 2,
+                price: 32
+            },
+            {
+                id: 4,
+                name: 7,
+                price: 9
+            }
+        
+        ])).toEqual([
+            {
+                id: 3,
+                name: 6,
+                price: 5
+            },
+            {
+                id: 4,
+                name: 7,
+                price: 9
+            }
+        
+        ])
+    })
+
+})
+
+
+// func that takes array of objs and returns
+// array of objects; each obj will have same keys
+// one of the keys = price will be an int
+// return array that has all objs with price
+//lower than 10; 
+// set a filter so you can only purchase items priced
+// less than 10

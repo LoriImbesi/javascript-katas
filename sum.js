@@ -1,7 +1,7 @@
 function sum(a, b) {
     return a + b;
   }
-  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber, cheapVegetables, sumOfArray}
+  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber, cheapVegetables, sumOfArray, cheaperThanTen}
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
 if (indexToCheck >= arrayofInts.length){
@@ -66,6 +66,20 @@ function sumOfArray(strings) {
     }, "")
 }
 
+function cheaperThanTen(arrayOfObjs){
+    return arrayOfObjs.filter(obj => obj["price"] < 10)
+}
+
+// accessing an array: [0] = first object
+// arrayOfObjs[0["price"] < 10]
+// take array of objects [ {price: 5}, {price: 32}, {price: 9}]
+// into array, into object, key < 10
+// filter for price less than 10
+// check price key for less than 10
+// filter creates new array
+
+
+
 // return arrayOfCheapVeggies
     //let arrayOfCheapVeggies = Object.entries(obj)
 
@@ -77,14 +91,10 @@ function sumOfArray(strings) {
 // NO KEY or VALUE can exist without its pair
 // Order is not defined in an object
 
-
-
     // else {
     //     return (filter.evens)
     // }
     
-    
-
  // [1, 2, 3] array
  // [0, 1, 2] indices
 

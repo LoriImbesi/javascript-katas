@@ -1,4 +1,7 @@
-const {sum, returnTargetIndex, removeTwos, countWords, largestNumber, cheapVegetables, sumOfArray, cheaperThanTen} = require('./sum');
+const {sum, returnTargetIndex, removeTwos, 
+    countWords, largestNumber, cheapVegetables, 
+    sumOfArray, cheaperThanTen, onlyOdds,
+    findOddValues} = require('./sum');
 // only
 // skip
 
@@ -111,3 +114,41 @@ describe("get items cheaper than 10", () => {
 //lower than 10; 
 // set a filter so you can only purchase items priced
 // less than 10
+
+
+describe("filter an array of ints and return only odds", () => {
+    test('array should return 5, 9, 15', () => {
+        expect(onlyOdds([2, 4, 5, 15, 9, 20] )).toEqual([5, 15, 9])
+    })
+
+})
+
+describe("find the odd prices in the objects", () => {
+    test('should return arrays of odd values [3, 5], [11, 7, 9]', () => {
+        expect(findOddValues([
+            {
+                id: 3,
+                name: 6,
+                price: 5
+            },
+            {
+                id: 8,
+                name: 2,
+                price: 32
+            },
+            {
+                id: 11,
+                name: 7,
+                price: 9
+            }
+        
+        ])).toEqual([[3, 5], [], [11, 7, 9]])
+    })
+
+// describe("create object from two arrays", () => {
+//     test('object should show fruits and numbers matched in object', () => {
+//         expect(arraysToObject(["oranges", "bananas", "coconuts"], [5, 8, 39])).toEqual({"oranges": 5, "bananas": 8, "coconuts": 39})
+//     })
+
+})
+

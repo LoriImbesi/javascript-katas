@@ -1,7 +1,10 @@
 function sum(a, b) {
     return a + b;
   }
-  module.exports = {sum , returnTargetIndex, removeTwos, removeEvenNums, countWords, largestNumber, cheapVegetables, sumOfArray, cheaperThanTen}
+  module.exports = {sum, returnTargetIndex, removeTwos, 
+    removeEvenNums, countWords, largestNumber, cheapVegetables, 
+    sumOfArray, cheaperThanTen, onlyOdds,
+    findOddValues}
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
 if (indexToCheck >= arrayofInts.length){
@@ -67,8 +70,29 @@ function sumOfArray(strings) {
 }
 
 function cheaperThanTen(arrayOfObjs){
+    console.log("cheese")
     return arrayOfObjs.filter(obj => obj["price"] < 10)
 }
+
+function onlyOdds(arrayofInts){
+    return arrayofInts.filter(int => int % 2 !== 0)
+}
+
+
+function findOddValues(arrayOfObjs){
+    // let oddsOfFirstObject = onlyOdds(Object.values(arrayOfObjs[0]))
+    // console.log(oddsOfFirstObject)
+    // return oddsOfFirstObject
+    return arrayOfObjs.map(obj => onlyOdds(Object.values(obj)))
+}
+//[[3, 6, 5], [8, 2, 32], [11, 7, 9]]
+//[[3, 5], [], [11, 7, 9]]
+
+// Emergency plan for what to do when you don't know what to do:
+// SET UP A TEST - the test will tell you what's needed - it's the
+// roadmap
+
+
 
 // accessing an array: [0] = first object
 // arrayOfObjs[0["price"] < 10]

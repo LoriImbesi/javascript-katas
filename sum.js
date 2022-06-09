@@ -1,10 +1,19 @@
 function sum(a, b) {
     return a + b;
   }
-  module.exports = {sum, returnTargetIndex, removeTwos, 
-    removeEvenNums, countWords, largestNumber, cheapVegetables, 
-    sumOfArray, cheaperThanTen, onlyOdds,
-    findOddValues}
+  module.exports = {sum, 
+    returnTargetIndex, 
+    removeTwos, 
+    removeEvenNums, 
+    countWords, 
+    largestNumber, 
+    cheapVegetables, 
+    sumOfArray, 
+    cheaperThanTen, 
+    onlyOdds,
+    findOddValues,
+    makeObjectFromArrays,
+    changeCase}
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
 if (indexToCheck >= arrayofInts.length){
@@ -70,7 +79,6 @@ function sumOfArray(strings) {
 }
 
 function cheaperThanTen(arrayOfObjs){
-    console.log("cheese")
     return arrayOfObjs.filter(obj => obj["price"] < 10)
 }
 
@@ -87,6 +95,45 @@ function findOddValues(arrayOfObjs){
 }
 //[[3, 6, 5], [8, 2, 32], [11, 7, 9]]
 //[[3, 5], [], [11, 7, 9]]
+
+function makeObjectFromArrays(arrayOfFruit, arrayOfInts){
+    return (arrayOfFruit, arrayOfInts)
+}
+
+// array of fruit need to now be keys
+// array of ints need to now be values
+// reduce - returns 1 thing
+// Object.assign?
+
+function changeCase(strToChange) {
+    let casedArray = strToChange.split("").map((letter, index) => {
+        if (index % 2 === 0) {
+            return letter.toLowerCase()
+        }
+        else {
+            return letter.toUpperCase()
+        }
+    })
+    
+    return casedArray.join('')
+}
+
+// letter needs to be lower or upper
+// loop through string and look at every letter
+// for, for each, .map, .filter
+// string.split() puts string into array
+// then need to loop over array
+// upper lower upper lower
+// function will call on an empty space
+
+
+
+
+
+
+
+
+
 
 // Emergency plan for what to do when you don't know what to do:
 // SET UP A TEST - the test will tell you what's needed - it's the

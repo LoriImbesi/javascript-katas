@@ -1,7 +1,15 @@
-const {sum, returnTargetIndex, removeTwos, 
-    countWords, largestNumber, cheapVegetables, 
-    sumOfArray, cheaperThanTen, onlyOdds,
-    findOddValues} = require('./sum');
+const {sum, 
+    returnTargetIndex, 
+    removeTwos, 
+    countWords, 
+    largestNumber, 
+    cheapVegetables, 
+    sumOfArray, 
+    cheaperThanTen, 
+    onlyOdds,
+    findOddValues,
+    makeObjectFromArrays,
+    changeCase} = require('./sum');
 // only
 // skip
 
@@ -147,8 +155,17 @@ describe("find the odd prices in the objects", () => {
 
 // describe("create object from two arrays", () => {
 //     test('object should show fruits and numbers matched in object', () => {
-//         expect(arraysToObject(["oranges", "bananas", "coconuts"], [5, 8, 39])).toEqual({"oranges": 5, "bananas": 8, "coconuts": 39})
+//         expect(makeObjectFromArrays(["oranges", "bananas", "coconuts"], 
+//             [5, 8, 39])).toEqual({"oranges": 5, "bananas": 8, "coconuts": 39})
 //     })
+
+// })
+
+describe("taking a string and mixing the case", () => {
+    test('"Abc" should return "aBc" ', () => {
+        expect(changeCase("Abc")).toEqual("aBc")
+    })
 
 })
 
+})

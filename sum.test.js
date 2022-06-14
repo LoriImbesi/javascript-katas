@@ -13,6 +13,7 @@ const {
   changeCase,
   getOddNums,
   arraysOfOddNumsOnly,
+  lowerCaseToCapitalArrays,
 } = require("./sum");
 // only
 // skip
@@ -188,6 +189,20 @@ describe("find the odd prices in the objects", () => {
           [7, 8, 9],
         ])
       ).toEqual([[1, 3], [5], [7, 9]]);
+    });
+  });
+
+  describe("take an array of arrays of letters", () => {
+    test("each array should have all elements capitalized", () => {
+      expect(
+        lowerCaseToCapitalArrays([
+          ["a", "b", "c"],
+          ["d", "e", "f"],
+        ])
+      ).toEqual([
+        ["A", "B", "C"],
+        ["D", "E", "F"],
+      ]);
     });
   });
 });

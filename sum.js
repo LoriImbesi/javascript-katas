@@ -17,6 +17,7 @@ module.exports = {
   changeCase,
   getOddNums,
   arraysOfOddNumsOnly,
+  lowerCaseToCapitalArrays,
 };
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
@@ -140,6 +141,12 @@ function arraysOfOddNumsOnly(arrayOfArrays) {
 // return arrays with odd numbers
 // filter an array of arrays?
 // make separate arrays first?
+
+function lowerCaseToCapitalArrays(arrayOfLetterArrays) {
+  return arrayOfLetterArrays.map((childarray) =>
+    childarray.map((letter) => letter.toUpperCase())
+  );
+}
 
 // Emergency plan for what to do when you don't know what to do:
 // SET UP A TEST - the test will tell you what's needed - it's the

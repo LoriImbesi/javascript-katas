@@ -18,6 +18,7 @@ module.exports = {
   getOddNums,
   arraysOfOddNumsOnly,
   lowerCaseToCapitalArrays,
+  letterCounter,
 };
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
@@ -147,6 +148,19 @@ function lowerCaseToCapitalArrays(arrayOfLetterArrays) {
     childarray.map((letter) => letter.toUpperCase())
   );
 }
+
+function letterCounter(arrayOfStringArrays) {
+  return arrayOfStringArrays.reduce((outerAccum, innerArray) => {
+    return (
+      outerAccum +
+      innerArray.reduce((innerAccum, nextStr) => {
+        return innerAccum + nextStr.length;
+      }, 0)
+    );
+  }, 0);
+}
+
+// loop with count, reduce
 
 // Emergency plan for what to do when you don't know what to do:
 // SET UP A TEST - the test will tell you what's needed - it's the

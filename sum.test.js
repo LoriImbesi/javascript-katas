@@ -14,6 +14,7 @@ const {
   getOddNums,
   arraysOfOddNumsOnly,
   lowerCaseToCapitalArrays,
+  letterCounter,
 } = require("./sum");
 // only
 // skip
@@ -203,6 +204,18 @@ describe("find the odd prices in the objects", () => {
         ["A", "B", "C"],
         ["D", "E", "F"],
       ]);
+    });
+  });
+
+  describe("take an array of arrays of strings", () => {
+    test("count the accumulation of letters of all arrays", () => {
+      expect(
+        letterCounter([
+          ["sister", "cheese"],
+          ["blue", "dog"],
+          ["golf balls", "cheddar"],
+        ])
+      ).toEqual(36);
     });
   });
 });

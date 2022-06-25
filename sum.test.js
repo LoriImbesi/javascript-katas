@@ -15,6 +15,8 @@ const {
   arraysOfOddNumsOnly,
   lowerCaseToCapitalArrays,
   letterCounter,
+  arrayAccum,
+  arraysToObject,
 } = require("./sum");
 // only
 // skip
@@ -218,4 +220,26 @@ describe("find the odd prices in the objects", () => {
       ).toEqual(36);
     });
   });
+
+  describe("take array of strings", () => {
+    test("accumulation of letters of array should be 7", () => {
+      expect(arrayAccum(["blue", "dog"])).toEqual(7);
+    });
+  });
+
+  describe("two arrays to one object", () => {
+    test("first array are keys, second array are values", () => {
+      expect(arraysToObject(["apples", "cheese", "bread"], [1, 4, 7])).toEqual({
+        apples: 1,
+        cheese: 4,
+        bread: 7,
+      });
+    });
+  });
 });
+
+// function creates one object to use first array as keys, second array
+// as values
+
+//["apples", "cheese", "bread"]
+//[1, 4, 7]

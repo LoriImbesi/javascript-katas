@@ -19,6 +19,8 @@ module.exports = {
   arraysOfOddNumsOnly,
   lowerCaseToCapitalArrays,
   letterCounter,
+  arrayAccum,
+  arraysToObject,
 };
 
 function returnTargetIndex(arrayofInts, indexToCheck) {
@@ -151,13 +153,22 @@ function lowerCaseToCapitalArrays(arrayOfLetterArrays) {
 
 function letterCounter(arrayOfStringArrays) {
   return arrayOfStringArrays.reduce((outerAccum, innerArray) => {
-    return (
-      outerAccum +
-      innerArray.reduce((innerAccum, nextStr) => {
-        return innerAccum + nextStr.length;
-      }, 0)
-    );
+    return outerAccum + arrayAccum(innerArray);
   }, 0);
+}
+
+function arrayAccum(arrayOfStrings) {
+  return arrayOfStrings.reduce((accumulator, str) => {
+    return accumulator + str.length;
+  }, 0);
+}
+
+function arraysToObject(array1, array2) {
+  const myObj = new Object();
+  array1.forEach((foodItem, index) => {
+    myObj[foodItem] = array2[index];
+  });
+  return myObj;
 }
 
 // loop with count, reduce

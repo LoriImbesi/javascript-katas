@@ -79,3 +79,21 @@ function arraysToObject(array1, array2) {
   });
   return myObj;
 }
+
+// array of arrays
+// inner loop and outer loop
+// print every other element
+
+function multipleArrays(nestedArray) {
+  nestedArray.forEach((array, outerIndex) => {
+    array.forEach((element, innerIdx) => {
+      console.log(element, "[" + outerIndex + "]", "[" + innerIdx + "]");
+    });
+  });
+}
+
+multipleArrays([
+  ["stuff", "cheese", "things"],
+  [1, 2, 3],
+  ["fire", "oxygen", "fuel"],
+]);

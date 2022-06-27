@@ -85,4 +85,18 @@ describe("two arrays to one object", () => {
       bread: 7,
     });
   });
+
+  //   describe("two arrays to one object", () => {
+  //     test("first array are keys, second array are values", () => {
+  //       expect(arraysToObject(["apples", "cheese", "bread"], [1, 4, 7])).toEqual({
+  //         apples: 1,
+  //         cheese: 4,
+  //         bread: 7,
+  //       });
+  //     });
+
+  // [["stuff", "cheese", "things"], [1, 2, 3], ["fire", "oxygen", "fuel"]]
+
+  // function that takes array of arrays that iterates through sub arrays
+  //and print every other element
 });
